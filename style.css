@@ -1,0 +1,55 @@
+body{
+  background-color: #925739;
+  font-family: 'Allura', cursive;
+  font-family: 'Lato', sans-serif;
+}
+.newgame{
+  z-index: 2;
+  top:50px
+}
+.player1{
+  background-color: #f7f7f7;
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 50%;
+}
+  .player2{
+    background-color: #ffffff;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50%;
+    bottom: 20px;
+    right: 20px;
+  }
+.container{
+  z-index: 9999;
+  position: relative;
+}
+#playerName{
+  font-size: 50px;
+}
+#scorePlayer1 , #scorePlayer2{
+  color:red ;
+  font-size: 80px;
+}
+#currentScore { 
+  background-color: #ff3933;
+}
+#roundPlayer1 , #roundPlayer2 {
+  color: white;
+  font-size: 30px;
+}
+#dice, img{
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 5px 5px 5px rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+}
+.active{
+  fill: red
+}
