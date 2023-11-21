@@ -31,4 +31,20 @@ $("#newGame").on("click",function(event){
         $(`#pointRedplayer${setPlayer}`).addClass("active");
      };
   // end of player switch function
+  // roll dice function 
+  $("#rollDice").on("click", function(){
+   
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    ROUND = ROUND + randomNumber; // adding the throw score to the temporary score
+
+    $("#dice").remove()// removing the old dice
+    $("#diceDiv").append(`<img id="dice" src="./images/dice-${randomNumber}.png" alt="dice ${randomNumber}"/>`);// ajout du nouveau dé
+    $(`#roundPlayer${setPlayer}`).text(`${ROUND}`) // display of the new temporary score
+
+//  function to change player if done 1
+    if(randomNumber == 1){
+    changePlayer();
+    }
+// add temporary points to the overall score
+  })
     })
